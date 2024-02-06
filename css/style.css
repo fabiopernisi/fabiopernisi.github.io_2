@@ -22,6 +22,9 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
+}
+
+nav ul li {
   margin-left: 20px;
 }
 
@@ -37,39 +40,46 @@ nav ul li a:hover {
   background-color: #555;
 }
 
-main, section {
+/* Main content styling */
+main {
   max-width: 800px;
   margin: 40px auto;
-  padding: 20px;
   background: #fff;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.button, .button:hover {
+/* Call to action button styling */
+.button {
   display: inline-block;
+  background: #594f4f;
+  color: #f6f0f0;
   padding: 10px 15px;
   margin: 10px 0;
   border-radius: 5px;
+  transition: background-color 0.3s;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
-  grid-column: 1 / -1;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.button {
-  background: #594f4f;
-  color: #f6f0f0;
 }
 
 .button:hover {
   background: #e7e7e7;
+}
+
+/* Section styling */
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background: #e7e7e7;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-bottom: 10px;
   color: #333;
 }
 
+/* Footer styling */
 footer {
   background: #555353;
   color: #fff;
@@ -77,12 +87,8 @@ footer {
   padding: 20px 0;
 }
 
-footer p, footer p.social-prompt {
+footer p {
   margin-bottom: 10px;
-}
-
-footer p.social-prompt {
-  font-style: italic;
 }
 
 footer ul {
@@ -90,6 +96,9 @@ footer ul {
   display: flex;
   justify-content: center;
   padding: 0;
+}
+
+footer ul li {
   margin: 0 10px;
 }
 
@@ -103,6 +112,13 @@ footer ul li a:hover {
   color: #999;
 }
 
+/* Social media prompt */
+footer p.social-prompt {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Responsive design adjustments */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -124,25 +140,67 @@ footer ul li a:hover {
   footer ul li {
     margin: 5px 0;
   }
-
-  .contact-form, .button {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  .button {
-    padding: 15px;
-  }
 }
 
-.contact-form-container, .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: grid;
+.contact-form {
+  display: grid;background-color: #f4f4f4
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
+
+.button {
+  grid-column: 1 / -1;
+  padding: 10px 20px;
+  background-color: #594f4f;
+  color: #f6f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+#contact {
+  text-align: center; 
+  background: #e7e7e7; 
+  padding: 40px 20px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); 
+  border-radius: 10px;
+}
+
+#contact h2 {
+  margin-bottom: 1em;
+  color: #333;
+}
+
+#contact p {
+  margin-bottom: 2em;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form Group Styling */
 .form-group {
   margin-bottom: 1em;
 }
@@ -161,19 +219,22 @@ footer ul li a:hover {
   border-radius: 5px;
 }
 
-#contact {
-  text-align: center;
-  background: #e7e7e7;
-  padding: 40px 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  border-radius: 10px;
+/* Button Styling */
+.button {
+  width: auto;
+  padding: 10px 30px;
+  margin-top: 1em;
+  font-size: 1em;
 }
 
-#contact h2 {
-  margin-bottom: 1em;
-  color: #333;
-}
+@media (max-width: 768px) {
+  .contact-form {
+    display: block;
+  }
 
-#contact p {
-  margin-bottom: 2em;
+  /* Adjust button style on smaller screens */
+  .button {
+    width: 100%;
+    padding: 15px;
+  }
 }
